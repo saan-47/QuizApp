@@ -25,4 +25,13 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="100dp"
         android:numColumns="auto_fit" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Remember there is negative marking in the test. So choose wisely."
+        android:textColor="#EA0707" />
 </RelativeLayout>

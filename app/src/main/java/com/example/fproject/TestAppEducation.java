@@ -39,38 +39,38 @@ public class TestAppEducation extends AppCompatActivity {
                 //Toast.makeText(TestAppEducation.this, arrayList.get(position), Toast.LENGTH_SHORT).show();
                 if(arrayList.get(position).equals("Artificial Intelligence")){
                     testForm = new TestForm();
-                    Toast.makeText(TestAppEducation.this, "alas", Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(TestAppEducation.this, "alas", Toast.LENGTH_SHORT).show();
                     Intent test = new Intent(getApplicationContext(),TestForm.class);
                     courseTest = arrayList.get(position);
                     test.putExtra("Course", courseTest);
                     startActivity(test);
                 }
                 else if(arrayList.get(position).equals("Software construction")){
-                    Toast.makeText(TestAppEducation.this, "alas", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(TestAppEducation.this, "alas", Toast.LENGTH_SHORT).show();
                     Intent test = new Intent(getApplicationContext(),TestForm.class);
                     test.putExtra("Course","Software construction");
                     startActivity(test);
                 }
                 else if(arrayList.get(position).equals("Mobile application and development")){
-                    Toast.makeText(TestAppEducation.this, "alas", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(TestAppEducation.this, "alas", Toast.LENGTH_SHORT).show();
                     Intent test = new Intent(getApplicationContext(),TestForm.class);
                     test.putExtra("Course","Mobile application and development");
                     startActivity(test);
                 }
                 else if(arrayList.get(position).equals("Finite theory of automata")){
-                    Toast.makeText(TestAppEducation.this, "alas", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(TestAppEducation.this, "alas", Toast.LENGTH_SHORT).show();
                     Intent test = new Intent(getApplicationContext(),TestForm.class);
                     test.putExtra("Course","Finite theory of automata");
                     startActivity(test);
                 }
                 else if(arrayList.get(position).equals("Software engineering")){
-                    Toast.makeText(TestAppEducation.this, "alas", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(TestAppEducation.this, "alas", Toast.LENGTH_SHORT).show();
                     Intent test = new Intent(getApplicationContext(),TestForm.class);
                     test.putExtra("Course","Software engineering");
                     startActivity(test);
                 }
                 else if(arrayList.get(position).equals("Java language")){
-                    Toast.makeText(TestAppEducation.this, "alas", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(TestAppEducation.this, "alas", Toast.LENGTH_SHORT).show();
                     Intent test = new Intent(getApplicationContext(),TestForm.class);
                     test.putExtra("Course","Java language");
                     startActivity(test);

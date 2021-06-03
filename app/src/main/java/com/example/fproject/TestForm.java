@@ -2,6 +2,7 @@ package com.example.fproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -24,8 +25,8 @@ public class TestForm extends AppCompatActivity {
     RadioButton radioButton2;
     RadioButton radioButton3;
     RadioButton radioButton4;
-    int score = 0;
-    int method = 0;
+    public int score = 0;
+    public int method = 0;
     SQLiteDatabase sqLiteDatabase;
 
     @Override
@@ -182,251 +183,224 @@ public class TestForm extends AppCompatActivity {
         radioButton2 = findViewById(check2);
         radioButton3 = findViewById(check3);
         radioButton4 = findViewById(check4);
+
+
+        //checking
 //        Toast.makeText(this, radioButton.getText(), Toast.LENGTH_SHORT).show();
 //        Toast.makeText(this, radioButton1.getText(), Toast.LENGTH_SHORT).show();
 //        Toast.makeText(this, radioButton2.getText(), Toast.LENGTH_SHORT).show();
 //        Toast.makeText(this, radioButton3.getText(), Toast.LENGTH_SHORT).show();
 //        Toast.makeText(this, radioButton4.getText(), Toast.LENGTH_SHORT).show();
+//        if(radioButton.getText().equals("False")){
+//                    score++;
+//        }
+//        else if(radioButton.getText().equals("True")) {
+//            score--;
+//        }
+//        if(radioButton1.getText().equals("False")){
+//            score++;
+//        }
+//        else {
+//            score--;
+//        }
+        Toast.makeText(this, String.valueOf(method), Toast.LENGTH_SHORT).show();
+
+
+        try{
+
+
         switch (method){
+
             case 1:
+            case 6:
                 if(radioButton.getText().equals("False")){
                     score= score+1;
-
                 }
-                else if(radioButton.getText().equals("True")){
-                    score= score-1;
-
+                else {
+                    score=score-1;
                 }
-                else if(radioButton1.getText().equals("False")){
-                    score= score+1;
-
-                }
-                else if(radioButton1.getText().equals("True")){
-                    score= score-1;
-
-                }
-                else if(radioButton2.getText().equals("False")){
-                    score= score+1;
-
-                }
-                else if(radioButton2.getText().equals("True")){
-                    score= score-1;
-
-                }
-                else if(radioButton3.getText().equals("False")){
-                    score= score-1;
-
-                }
-                else if(radioButton3.getText().equals("True")){
-                    score= score+1;
-
-                }
-                else if(radioButton4.getText().equals("True")){
-                    score= score-1;
-
-                }
-                else if(radioButton4.getText().equals("False")){
+                if(radioButton1.getText().equals("False")){
                     score= score+1;
                 }
+                else {
+                    score=score-1;
+                }
+                if(radioButton2.getText().equals("False")){
+                    score= score+1;
+                }
+                else {
+                    score=score-1;
+                }
+
+                if(radioButton3.getText().equals("True")){
+                    score= score+1;
+                }
+                else{
+                    score=score-1;
+                }
+                if(radioButton4.getText().equals("False")){
+                    score= score+1;
+                }
+                else {
+                    score=score-1;
+                }
+                break;
             case 2:
                 if(radioButton.getText().equals("False")){
                     score= score+1;
-
                 }
-                else if(radioButton.getText().equals("True")){
+                else{
                     score= score-1;
 
                 }
-                else if(radioButton1.getText().equals("False")){
+                if(radioButton1.getText().equals("True")){
+                    score= score+1;
+                }
+                else {
+                score= score-1;
+                }
+                if(radioButton2.getText().equals("True")){
+                    score= score+1;
+                }
+                else{
+                    score= score-1;
+                }
+                if(radioButton3.getText().equals("False")){
+                    score= score+1;
+                }
+                else{
                     score= score-1;
 
                 }
-                else if(radioButton1.getText().equals("True")){
+                if(radioButton4.getText().equals("False")){
+                    score= score+1;
+                }
+                else{
+                    score= score-1;
+                }
+                break;
+            case 3:
+                if(radioButton.getText().equals("False")){
+                    score= score+1;
+                }
+                else {
+                    score= score-1;
+                }
+                 if(radioButton1.getText().equals("False")){
                     score= score+1;
 
                 }
-                else if(radioButton2.getText().equals("False")){
+                else{
                     score= score-1;
 
                 }
-                else if(radioButton2.getText().equals("True")){
+                 if(radioButton2.getText().equals("False")){
                     score= score+1;
 
                 }
-                else if(radioButton3.getText().equals("False")){
-                    score= score+1;
-
-                }
-                else if(radioButton3.getText().equals("True")){
+                else{
                     score= score-1;
 
                 }
-                else if(radioButton4.getText().equals("True")){
+                if(radioButton3.getText().equals("True")){
+                    score= score+1;
+
+                }
+                else {
                     score= score-1;
 
                 }
-                else if(radioButton4.getText().equals("False")){
+
+                if(radioButton4.getText().equals("True")){
+                    score= score+1;
+
+                }
+                else {
+                    score= score-1;
+                }
+                break;
+//
+            case 4:
+                if(radioButton.getText().equals("False")){
                     score= score+1;
                 }
-
-                case 3:
-                    if(radioButton.getText().equals("False")){
-                        score= score+1;
-                    }
-                    else if(radioButton.getText().equals("True")){
-                        score= score-1;
-                    }
-                    else if(radioButton1.getText().equals("False")){
-                    score= score+1;
-
-                    }
-                    else if(radioButton1.getText().equals("True")){
-                        score= score-1;
-
-                    }
-                    else if(radioButton2.getText().equals("False")){
-                        score= score+1;
-
-                    }
-                    else if(radioButton2.getText().equals("True")){
-                        score= score-1;
-
-                    }
-                    else if(radioButton3.getText().equals("False")){
-                        score= score-1;
-
-                    }
-                    else if(radioButton3.getText().equals("True")){
-                        score= score+1;
-
-                    }
-                    else if(radioButton4.getText().equals("True")){
-                        score= score+1;
-
-                    }
-                    else if(radioButton4.getText().equals("False")){
-                        score= score-1;
-                    }
-
-                case 4:
-                    if(radioButton.getText().equals("False")){
-                        score= score+1;
-                    }
-                    else if(radioButton.getText().equals("True")){
-                        score= score-1;
-                    }
-                    else if(radioButton1.getText().equals("False")){
+                else{
                     score= score-1;
-
-                    }
-                    else if(radioButton1.getText().equals("True")){
-                        score= score+1;
-
-                    }
-                    else if(radioButton2.getText().equals("False")){
-                        score= score-1;
-
-                    }
-                    else if(radioButton2.getText().equals("True")){
-                        score= score+1;
-
-                    }
-                    else if(radioButton3.getText().equals("False")){
-                        score= score-1;
-
-                    }
-                    else if(radioButton3.getText().equals("True")){
-                        score= score+1;
-
-                    }
-                    else if(radioButton4.getText().equals("True")){
-                        score= score+1;
-
-                    }
-                    else if(radioButton4.getText().equals("False")){
-                        score= score-1;
-                    }
-
-                case 5:
-                    if(radioButton.getText().equals("False")){
-                        score= score+1;
-                    }
-                    else if(radioButton.getText().equals("True")){
-                        score= score-1;
-                    }
-                    else if(radioButton1.getText().equals("False")){
+                }
+                if(radioButton1.getText().equals("True")) {
                     score= score+1;
 
-                    }
-                    else if(radioButton1.getText().equals("True")){
-                        score= score-1;
-
-                    }
-                    else if(radioButton2.getText().equals("False")){
-                        score= score-1;
-
-                    }
-                    else if(radioButton2.getText().equals("True")){
-                        score= score+1;
-
-                    }
-                    else if(radioButton3.getText().equals("False")){
-                        score= score-1;
-
-                    }
-                    else if(radioButton3.getText().equals("True")){
-                        score= score+1;
-
-                    }
-                    else if(radioButton4.getText().equals("True")){
-                        score= score-1;
-
-                    }
-                    else if(radioButton4.getText().equals("False")){
-                        score= score+1;
-                    }
-
-                case 6:
-                    if(radioButton.getText().equals("False")){
-                        score= score+1;
-                    }
-                    else if(radioButton.getText().equals("True")){
-                        score= score-1;
-                    }
-                    else if(radioButton1.getText().equals("False")){
+                }
+                else{
+                    score= score-1;
+                }
+                if(radioButton2.getText().equals("True")){
                     score= score+1;
 
-                    }
-                    else if(radioButton1.getText().equals("True")){
-                        score= score-1;
+                }
+                else {
+                    score= score-1;
+                }
+                if(radioButton3.getText().equals("True")){
+                    score= score+1;
 
-                    }
-                    else if(radioButton2.getText().equals("False")){
+                }
+
+                else{
+                    score= score-1;
+                }
+
+                if(radioButton4.getText().equals("True")){
                         score= score+1;
-
-                    }
-                    else if(radioButton2.getText().equals("True")){
+                }
+                else {
+                    score= score-1;
+                }
+                break;
+            case 5:
+                if(radioButton.getText().equals("False")){
+                    score= score+1;
+                }
+                else{
+                    score= score-1;
+                }
+                if(radioButton1.getText().equals("False")){
+                    score= score+1;
+                }
+                else{
+                    score= score-1;
+                }
+                if(radioButton2.getText().equals("True")){
+                    score= score+1;
+                }
+                else{
+                    score= score-1;
+                }
+                if(radioButton3.getText().equals("True")){
+                    score= score+1;
+                }
+                else{
                         score= score-1;
-
-                    }
-                    else if(radioButton3.getText().equals("False")){
-                        score= score-1;
-
-                    }
-                    else if(radioButton3.getText().equals("True")){
-                        score= score+1;
-
-                    }
-                    else if(radioButton4.getText().equals("True")){
-                        score= score-1;
-
-                    }
-                    else if(radioButton4.getText().equals("False")){
-                        score= score+1;
-                    }
-                default:
-                    Toast.makeText(this, "DJ Got us fallen again."+score, Toast.LENGTH_SHORT).show();
+                }
+                if(radioButton4.getText().equals("False")){
+                    score= score+1;
+                }
+                else {
+                    score= score-1;
+                }
+                break;
+            default:
+                    Toast.makeText(this, "DJ Got us fallen again.", Toast.LENGTH_SHORT).show();
         }
+        String st = String.valueOf(score);
+            Intent result = new Intent(getApplicationContext(), Result.class);
+            result.putExtra("score",st);
+            startActivity(result);
+        }catch (Exception e){
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+
+
         
     }
 }

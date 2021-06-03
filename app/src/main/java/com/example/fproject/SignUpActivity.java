@@ -35,7 +35,6 @@ public class SignUpActivity extends AppCompatActivity {
 //    }
     public void application(View view)
     {
-
         try{
             EditText userName = findViewById(R.id.editTextUserName);
             String name = userName.getText().toString();
